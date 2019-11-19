@@ -38,12 +38,14 @@ public class Main extends Application {
 		
 		for(int i = 0; i < DIFFUSE_LEVEL; i++) {
 		
+			int partialSizeX = SIZE / NUM_OF_DIV_X;
+			int partialSizeY = SIZE / NUM_OF_DIV_Y;
+			
 			//Creates the "Peaks" or "nodes"
 			for(int divX = 0; divX < NUM_OF_DIV_X; divX++) {
 				for(int divY = 0; divY < NUM_OF_DIV_Y; divY++) {
-					int partialSize = SIZE / NUM_OF_DIV_X;
-					noiseNodeXList[divY][divX] = (int) (Math.random() * partialSize) + (divX * partialSize);
-					noiseNodeYList[divY][divX] = (int) (Math.random() * partialSize) + (divY * partialSize);
+					noiseNodeXList[divY][divX] = (int) (Math.random() * partialSizeX) + (divX * partialSizeX);
+					noiseNodeYList[divY][divX] = (int) (Math.random() * partialSizeY) + (divY * partialSizeY);
 				}
 			}
 			
