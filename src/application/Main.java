@@ -76,9 +76,9 @@ public class Main extends Application {
 								BLUE_CHANNEL ? Math.max(Math.min(1.0 - minDistance/MAX_DISTANCE, 1.0), 0.0) : 0.0, 
 								1.0f / ((float) DIFFUSE_LEVEL)
 							) :
-						new Color(RED_CHANNEL ? Math.max(Math.min(1.0 - minDistance/MAX_DISTANCE, 1.0), 0.0) : 0.0, 
-								GREEN_CHANNEL ? Math.max(Math.min(1.0 - minDistance/MAX_DISTANCE, 1.0), 0.0) : 0.0, 
-								BLUE_CHANNEL ? Math.max(Math.min(1.0 - minDistance/MAX_DISTANCE, 1.0), 0.0) : 0.0, 
+						new Color(RED_CHANNEL ? Math.max(Math.min(minDistance/MAX_DISTANCE, 1.0), 0.0) : 0.0, 
+								GREEN_CHANNEL ? Math.max(Math.min(minDistance/MAX_DISTANCE, 1.0), 0.0) : 0.0, 
+								BLUE_CHANNEL ? Math.max(Math.min(minDistance/MAX_DISTANCE, 1.0), 0.0) : 0.0, 
 								1.0f / ((float) DIFFUSE_LEVEL)
 							)
 					);
